@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Monday Air เที่ยวบินวันจันทร์จากเตียงไปออฟฟิศ เช็กอินและรับบัตรขึ้นเครื่อง">
+    <meta name="theme-color" content="rgb(17 17 17)">
+    <link rel="icon" href="data:,">
+    <title>บัตรขึ้นเครื่อง — Monday Air</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body class="flex min-h-dvh flex-col bg-neutral-50 font-body text-base text-neutral-900">
+    <a href="#top" class="sr-only focus:not-sr-only focus:block focus:bg-primary-500 focus:px-4 focus:py-3 focus:font-semibold">ข้ามไปเนื้อหาหลัก</a>
+<header class="bg-neutral-900 text-neutral-0">
+  <nav class="mx-auto max-w-page page-x flex flex-wrap items-center justify-between gap-4 py-4" aria-label="เมนูหลัก">
+    <a href="index.html" class="flex items-center gap-3 font-display text-lg font-bold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">
+      <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-neutral-900" aria-hidden="true">✈</span>
+      MONDAY AIR
+    </a>
+    <ul class="flex flex-wrap items-center gap-6 text-sm">
+      <li><a href="index.html#departures" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ขาออกวันนี้</a></li>
+      <li><a href="index.html#cabins" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ชั้นโดยสาร</a></li>
+      <li><a href="index.html#checkin" class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 font-semibold text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เช็กอิน <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a></li>
+    </ul>
+  </nav>
+</header>
+    <main id="top" class="flex flex-1 flex-col">
+<div class="flex flex-1 flex-col">
+  <section class="flex-1 bg-neutral-900 py-12 text-neutral-0 md:py-16" aria-labelledby="pass-title">
+    <div class="mx-auto max-w-page page-x grid items-center gap-10 lg:grid-cols-5">
+      <div class="flex min-w-0 flex-col gap-5 lg:col-span-2">
+        <a href="index.html" class="inline-flex w-fit items-center gap-2 text-sm text-neutral-200 hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500"><span aria-hidden="true">←</span> กลับหน้าแรก</a>
+        <p class="font-display text-sm font-semibold tracking-widest text-primary-500">BOARDING PASS · <span>MA-0101</span></p>
+        <h1 id="pass-title" class="text-balance font-display text-3xl font-bold focus:outline-none">บัตรขึ้นเครื่อง</h1>
+        <p id="pass-hint" class="text-neutral-200">บัตรตัวอย่างสำหรับเที่ยวบิน MA-0101 · กรุณามาถึงประตูก่อน 08:55</p>
+        <dl class="grid grid-cols-2 gap-3 font-display">
+          <div class="flex flex-col gap-1 rounded-control bg-neutral-0 p-4 text-neutral-900">
+            <dt class="text-sm font-semibold">Gate</dt>
+            <dd class="flex items-center justify-between text-3xl font-extrabold"><span>L2</span> <span class="text-xl" aria-hidden="true">→</span></dd>
+          </div>
+          <div class="flex flex-col gap-1 rounded-control bg-primary-500 p-4 text-neutral-900">
+            <dt class="text-sm font-semibold">Boarding</dt>
+            <dd class="text-3xl font-extrabold tabular-nums">08:45</dd>
+          </div>
+        </dl>
+        <div class="flex flex-wrap gap-3">
+          <a href="index.html#departures" class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-6 py-3 font-semibold text-neutral-900 transition hover:bg-primary-600 active:scale-95 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-0">ดูเที่ยวบินวันนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a>
+          <a id="recheck" href="index.html#checkin" class="inline-flex items-center gap-2 rounded-full border-2 border-neutral-0 px-5 py-3 font-semibold hover:bg-neutral-0 hover:text-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">แก้ไขเช็กอิน</a>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-xl overflow-hidden rounded-card bg-neutral-0 text-neutral-900 motion-safe:animate-rise lg:col-span-3">
+        <div class="flex items-center justify-between bg-primary-500 px-6 py-4 font-display font-bold">
+          <span class="flex items-center gap-2"><span aria-hidden="true">✈</span> MONDAY AIR</span>
+          <span class="text-sm">MA-0101</span>
+        </div>
+        <div class="flex flex-col gap-6 p-6">
+          <div class="flex flex-col gap-2 font-display">
+            <div class="flex items-end justify-between gap-4">
+              <p class="text-display font-extrabold tracking-tight">BED</p>
+              <p class="pb-2 text-right text-sm text-neutral-500"><span>เตียง</span><br><span>08:59</span></p>
+            </div>
+            <div class="relative flex h-8 items-center text-neutral-500" aria-hidden="true"><span class="dots h-2 flex-1"></span><span class="absolute top-1/2 left-0 -translate-y-1/2 text-xl text-neutral-900 motion-safe:animate-fly motion-reduce:right-0 motion-reduce:left-auto">✈</span></div>
+            <div class="flex items-end justify-between gap-4">
+              <p class="pb-2 text-sm text-neutral-500"><span>ออฟฟิศ</span><br><span>09:00</span></p>
+              <p class="text-display font-extrabold tracking-tight">OFC</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm text-neutral-500">ผู้โดยสาร</p>
+            <p id="bp-name" class="font-display text-2xl font-bold">คุณผู้โดยสาร</p>
+          </div>
+          <dl class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div><dt class="text-sm text-neutral-500">ประตู</dt><dd class="font-display text-xl font-bold">L2</dd></div>
+            <div><dt class="text-sm text-neutral-500">ที่นั่ง</dt><dd id="bp-seat" class="font-display text-xl font-bold">12A</dd></div>
+            <div><dt class="text-sm text-neutral-500">ชั้น</dt><dd id="bp-cabin" class="font-display text-xl font-bold">Business</dd></div>
+            <div id="bp-meal-item"><dt class="text-sm text-neutral-500">อาหาร</dt><dd id="bp-meal" class="text-xl font-bold">ชาไทย</dd></div>
+          </dl>
+        </div>
+        <div class="relative" aria-hidden="true">
+          <span class="absolute -left-4 -top-4 size-8 rounded-full bg-neutral-900"></span>
+          <span class="absolute -right-4 -top-4 size-8 rounded-full bg-neutral-900"></span>
+          <div class="mx-6 border-t-2 border-dashed border-neutral-200"></div>
+        </div>
+        <div class="flex flex-col gap-2 p-6">
+          <div class="relative overflow-hidden">
+            <div class="barcode h-16 w-full" role="img" aria-label="บาร์โค้ดตกแต่ง"></div>
+            <span class="absolute inset-y-0 left-0 w-1 rounded-full bg-primary-500 motion-safe:animate-scan motion-reduce:hidden" aria-hidden="true"></span>
+          </div>
+          <p class="text-center font-display text-sm tracking-widest text-neutral-500">MA0101BEDOFC0859</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+    </main>
+<footer class="bg-neutral-900 text-neutral-200">
+  <div class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between">
+    <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>  </div>
+</footer>
+  </body>
+</html>
