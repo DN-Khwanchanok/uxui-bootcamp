@@ -19,6 +19,9 @@
     --color-danger-50: #FEF2F2;
     --color-danger-600: #DC2626;
 
+    /* สีช่องอีเมลที่คืนค่า ตามสถานะ autofill ในภาพอ้างอิง */
+    --color-input-restored: rgb(232 240 254);
+
     /* 2. Font: font-display และ font-body */
     --font-display: "Outfit", "IBM Plex Sans Thai", system-ui, sans-serif;
     --font-body: "IBM Plex Sans Thai", "Outfit", system-ui, sans-serif;

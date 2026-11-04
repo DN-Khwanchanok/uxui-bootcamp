@@ -142,6 +142,9 @@
             field.value = previousCheckin.get(field.name);
           }
         }
+        if (previousCheckin.get("email")) {
+          document.getElementById("email").classList.replace("bg-neutral-0", "bg-input-restored");
+        }
       }
       const returningToEdit = previousCheckin.get("leg") === "back";
       checkinForm.elements.namedItem("leg").value = "back";
@@ -153,7 +156,7 @@
         field.value = value;
         checkinForm.append(field);
       }
-      for (const name of ["cabin", "rating", "rating-note"]) {
+      for (const name of ["cabin", "meal", "rating", "rating-note"]) {
         addTripField("out-" + name, previousCheckin.get("out-" + name) ?? previousCheckin.get(name) ?? "");
       }
       outboundBags.forEach(bag => addTripField("out-bag", bag));
@@ -162,7 +165,7 @@
       const officeTrip = new URLSearchParams(previousCheckin);
       if (returningToEdit) {
         officeTrip.delete("leg");
-        for (const name of ["cabin", "rating", "rating-note"]) {
+        for (const name of ["cabin", "meal", "rating", "rating-note"]) {
           officeTrip.set(name, previousCheckin.get("out-" + name) || "");
           officeTrip.delete("out-" + name);
         }
@@ -179,6 +182,9 @@
         checkinForm.querySelector("input:invalid, select:invalid, textarea:invalid").focus();
       }, true);
       checkinForm.addEventListener("input", (event) => {
+        if (event.target.id === "email") {
+          event.target.classList.replace("bg-input-restored", "bg-neutral-0");
+        }
         if (event.target.validity.valid) {
           event.target.removeAttribute("aria-invalid");
         }

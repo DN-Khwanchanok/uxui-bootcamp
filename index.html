@@ -129,7 +129,7 @@
           <p class="text-neutral-500 group-hover:text-neutral-200 group-focus-within:text-neutral-200">นั่งติดแอร์ เย็นจนต้องพกเสื้อคลุม</p>
         </div>
         <p class="mt-auto border-t border-neutral-200 pt-4 font-semibold group-hover:border-neutral-500 group-focus-within:border-neutral-500">กาแฟ 1 แก้ว</p>
-        <label for="cabin-economy" class="cursor-pointer flex items-center justify-between rounded-full border-2 border-neutral-900 px-5 py-3 font-semibold group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-neutral-900 group-focus-within:border-primary-500 group-focus-within:bg-primary-500 group-focus-within:text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เลือกชั้นนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span></label>
+        <a href="#checkin" data-cabin="Economy" class="cursor-pointer flex items-center justify-between rounded-full border-2 border-neutral-900 px-5 py-3 font-semibold group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-neutral-900 group-focus-within:border-primary-500 group-focus-within:bg-primary-500 group-focus-within:text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เลือกชั้นนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span></a>
       </article>
       <article class="group flex flex-col gap-5 rounded-card border-2 border-neutral-900 bg-neutral-0 p-6 transition hover:-translate-y-1 hover:bg-neutral-900 hover:text-neutral-0 hover:shadow-card-hover focus-within:bg-neutral-900 focus-within:text-neutral-0">
         <div class="flex items-start justify-between gap-4">
@@ -141,7 +141,7 @@
           <p class="text-neutral-500 group-hover:text-neutral-200 group-focus-within:text-neutral-200">ริมหน้าต่าง วิวตึกข้าง ๆ และท้องฟ้าบางส่วน</p>
         </div>
         <p class="mt-auto border-t border-neutral-200 pt-4 font-semibold group-hover:border-neutral-500 group-focus-within:border-neutral-500">กาแฟ 2 แก้ว</p>
-        <label for="cabin-business" class="cursor-pointer flex items-center justify-between rounded-full border-2 border-neutral-900 px-5 py-3 font-semibold group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-neutral-900 group-focus-within:border-primary-500 group-focus-within:bg-primary-500 group-focus-within:text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เลือกชั้นนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span></label>
+        <a href="#checkin" data-cabin="Business" class="cursor-pointer flex items-center justify-between rounded-full border-2 border-neutral-900 px-5 py-3 font-semibold group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-neutral-900 group-focus-within:border-primary-500 group-focus-within:bg-primary-500 group-focus-within:text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เลือกชั้นนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span></a>
       </article>
       <article class="group flex flex-col gap-5 rounded-card border-2 border-neutral-900 bg-neutral-0 p-6 transition hover:-translate-y-1 hover:bg-neutral-900 hover:text-neutral-0 hover:shadow-card-hover focus-within:bg-neutral-900 focus-within:text-neutral-0 md:col-span-2 lg:col-span-1">
         <div class="flex items-start justify-between gap-4">
@@ -153,7 +153,7 @@
           <p class="text-neutral-500 group-hover:text-neutral-200 group-focus-within:text-neutral-200">ใกล้แพนทรี่ ขนมไม่เคยขาด</p>
         </div>
         <p class="mt-auto border-t border-neutral-200 pt-4 font-semibold group-hover:border-neutral-500 group-focus-within:border-neutral-500">กาแฟ 3 แก้ว</p>
-        <label for="cabin-first" class="cursor-pointer flex items-center justify-between rounded-full border-2 border-neutral-900 px-5 py-3 font-semibold group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-neutral-900 group-focus-within:border-primary-500 group-focus-within:bg-primary-500 group-focus-within:text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เลือกชั้นนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span></label>
+        <a href="#checkin" data-cabin="First" class="cursor-pointer flex items-center justify-between rounded-full border-2 border-neutral-900 px-5 py-3 font-semibold group-hover:border-primary-500 group-hover:bg-primary-500 group-hover:text-neutral-900 group-focus-within:border-primary-500 group-focus-within:bg-primary-500 group-focus-within:text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เลือกชั้นนี้ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span></a>
       </article>
     </div>
   </section>
@@ -268,7 +268,18 @@
             field.value = previousCheckin.get(field.name);
           }
         }
+        if (previousCheckin.get("email")) {
+          document.getElementById("email").classList.replace("bg-neutral-0", "bg-input-restored");
+        }
       }
+      document.querySelectorAll("#cabins [data-cabin]").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.getElementById("cabin-" + link.dataset.cabin.toLowerCase()).checked = true;
+          document.getElementById("checkin").scrollIntoView({ block: "start" });
+          document.getElementById("name").focus({ preventScroll: true });
+        });
+      });
       checkinForm.addEventListener("invalid", (event) => {
         event.preventDefault();
         if (event.target.id === "consent") {
@@ -277,6 +288,9 @@
         checkinForm.querySelector("input:invalid, select:invalid, textarea:invalid").focus();
       }, true);
       checkinForm.addEventListener("input", (event) => {
+        if (event.target.id === "email") {
+          event.target.classList.replace("bg-input-restored", "bg-neutral-0");
+        }
         if (event.target.validity.valid) {
           event.target.removeAttribute("aria-invalid");
         }

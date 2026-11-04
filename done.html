@@ -85,6 +85,15 @@
         document.getElementById("stat-bags").textContent = passenger.getAll("bag").length;
         const rating = passenger.get("out-rating");
         document.getElementById("stat-rating").textContent = ["1", "2", "3", "4", "5"].includes(rating) ? rating : "–";
+
+        const nextCheckin = new URLSearchParams();
+        for (const name of ["name", "email", "cabin", "note"]) {
+          if (passenger.has(name)) nextCheckin.set(name, passenger.get(name));
+        }
+        const meal = passenger.get("out-meal") || passenger.get("meal");
+        if (meal) nextCheckin.set("meal", meal);
+        passenger.getAll("bag").forEach(bag => nextCheckin.append("bag", bag));
+        document.getElementById("restart").href = "index.html?" + nextCheckin.toString();
       }
     </script>
   </body>
