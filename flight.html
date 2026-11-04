@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Monday Air เที่ยวบินวันจันทร์จากเตียงไปออฟฟิศ เช็กอินและรับบัตรขึ้นเครื่อง">
+    <meta name="theme-color" content="rgb(17 17 17)">
+    <link rel="icon" href="data:,">
+    <title>กำลังบินไปออฟฟิศ — Monday Air</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body class="flex min-h-dvh flex-col bg-neutral-50 font-body text-base text-neutral-900">
+    <a href="#top" class="sr-only focus:not-sr-only focus:block focus:bg-primary-500 focus:px-4 focus:py-3 focus:font-semibold">ข้ามไปเนื้อหาหลัก</a>
+<header class="bg-neutral-900 text-neutral-0">
+  <nav class="mx-auto max-w-page page-x flex flex-wrap items-center justify-between gap-4 py-4" aria-label="เมนูหลัก">
+    <a href="index.html" class="flex items-center gap-3 font-display text-lg font-bold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">
+      <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-neutral-900" aria-hidden="true">✈</span>
+      MONDAY AIR
+    </a>
+    <ul class="flex flex-wrap items-center gap-6 text-sm">
+      <li><a href="index.html#departures" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ขาออกวันนี้</a></li>
+      <li><a href="index.html#cabins" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ชั้นโดยสาร</a></li>
+      <li><a href="index.html#checkin" class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 font-semibold text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เช็กอิน <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a></li>
+    </ul>
+  </nav>
+</header>
+    <main id="top" class="flex flex-1 flex-col">
+<div id="view-flight" class="flex flex-1 flex-col">
+  <section class="flex-1 bg-neutral-900 py-12 text-neutral-0 md:py-20" aria-labelledby="flight-title">
+    <div class="mx-auto max-w-page page-x flex flex-col gap-10">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <p class="flex items-center gap-3 font-display text-sm font-semibold tracking-widest text-primary-500">
+          <span class="relative flex size-3" aria-hidden="true"><span class="absolute inline-flex size-full rounded-full bg-primary-500 opacity-75 motion-safe:animate-ping"></span><span class="relative inline-flex size-3 rounded-full bg-primary-500"></span></span>
+          IN FLIGHT · <span data-flight="code">MA-0101</span>
+        </p>
+        <a id="land-link" href="arrived.html" class="group/btn inline-flex items-center gap-2 text-sm text-neutral-200 hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ข้ามไปลงจอด <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a>
+      </div>
+      <h1 id="flight-title" tabindex="-1" class="text-balance font-display text-3xl font-bold focus:outline-none">กำลังบินไป<span data-flight="toTh">ออฟฟิศ</span></h1>
+
+      <div class="flex flex-col gap-4 font-display">
+        <div class="flex items-end justify-between gap-4 font-extrabold">
+          <p class="text-display" data-flight="from">BED</p>
+          <p class="text-display text-primary-500" data-flight="to">OFC</p>
+        </div>
+        <div class="relative h-12" aria-hidden="true">
+          <div class="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-neutral-500"></div>
+          <div class="absolute left-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-primary-500 motion-safe:animate-progress-fill motion-reduce:w-full"></div>
+          <span id="flight-plane" class="absolute top-1/2 left-0 -translate-y-1/2 text-3xl text-primary-500 motion-safe:animate-progress motion-reduce:right-0 motion-reduce:left-auto">✈</span>
+        </div>
+        <div class="flex justify-between gap-4 text-sm text-neutral-200 tabular-nums">
+          <span>ออก <span data-flight="dep">08:59</span></span>
+          <span>เวลาบิน <span data-flight="duration">1 นาที</span></span>
+          <span>ถึง <span data-flight="arr">09:00</span></span>
+        </div>
+      </div>
+
+      <div class="rounded-card border-2 border-neutral-500 p-6 md:p-8">
+        <p class="mb-4 font-display text-sm font-semibold tracking-widest text-neutral-200">ประกาศจากกัปตัน</p>
+        <ul id="announce" class="flex flex-col gap-3 text-lg">
+          <li class="flex gap-3 motion-safe:animate-appear"><span class="text-primary-500" aria-hidden="true">▸</span><span data-flight="a1">สวัสดีครับ กัปตันพูด ตอนนี้เรากำลังผ่านเขตรถติดหน้าซอย</span></li>
+          <li class="flex gap-3 motion-safe:animate-appear animate-delay-2000"><span class="text-primary-500" aria-hidden="true">▸</span><span data-flight="a2">ระดับความสูง 3 ชั้น (สะพานลอย) ท้องฟ้าแจ่มใส อีเมลเริ่มเข้า</span></li>
+          <li class="flex gap-3 motion-safe:animate-appear animate-delay-4000"><span class="text-primary-500" aria-hidden="true">▸</span><span data-flight="a3">เตรียมลงจอดที่ออฟฟิศ กรุณาทำหน้าให้สดชื่น</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+    </main>
+<footer class="bg-neutral-900 text-neutral-200">
+  <div class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between">
+    <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>  </div>
+</footer>
+    <script>
+      const passenger = new URLSearchParams(window.location.search);
+      const isReturn = passenger.get("leg") === "back";
+      if (isReturn) {
+        const flight = {
+          code: "MA-1700", from: "OFC", to: "BED", toTh: "เตียง",
+          dep: "17:00", arr: "17:30", duration: "30 นาที",
+          a1: "ออกจากเขตประชุมเรียบร้อย ปิดแจ้งเตือนได้",
+          a2: "ทางซ้ายมือคือร้านหมูกระทะ ขออภัย เที่ยวบินนี้ไม่แวะ",
+          a3: "เตียงอยู่ข้างหน้า กรุณาเตรียมตัวนอน"
+        };
+        document.querySelectorAll("[data-flight]").forEach(element => {
+          element.textContent = flight[element.dataset.flight];
+        });
+        document.title = "กำลังบินกลับเตียง — Monday Air";
+      }
+      const arrivalUrl = (isReturn ? "done.html" : "arrived.html") + window.location.search;
+      document.getElementById("land-link").href = arrivalUrl;
+      let flightTimer;
+
+      window.addEventListener("pageshow", () => {
+        clearTimeout(flightTimer);
+        flightTimer = setTimeout(() => {
+          window.location.assign(arrivalUrl);
+        }, 6500);
+      });
+      window.addEventListener("pagehide", () => clearTimeout(flightTimer));
+    </script>
+  </body>
+</html>
