@@ -140,11 +140,8 @@
 }
 
 /* Unlayered validation states take precedence over neutral field utilities. */
-input:user-invalid {
+#name:user-invalid,
+#email:user-invalid {
   border-color: var(--color-danger-600);
   background-color: var(--color-danger-50);
-}
-
-fieldset:has(input[name="cabin"]:user-invalid) > div > label {
-  border-color: var(--color-danger-600);
 }
