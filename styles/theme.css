@@ -133,7 +133,7 @@
   #name:user-invalid ~ #err-name,
   #email:user-invalid ~ #err-email,
   fieldset:has(input[name="cabin"]:user-invalid) > #err-cabin,
-  label:has(#consent:user-invalid) + #err-consent { display: block; }
+  label:has(#consent[aria-invalid="true"]:not(:checked)) + #err-consent { display: block; }
   input[type="checkbox"], input[type="radio"] {
     @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900;
   }

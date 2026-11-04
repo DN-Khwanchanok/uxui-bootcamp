@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Monday Air เที่ยวบินวันจันทร์จากเตียงไปออฟฟิศ เช็กอินและรับบัตรขึ้นเครื่อง">
+    <meta name="theme-color" content="rgb(17 17 17)">
+    <link rel="icon" href="data:,">
+    <title>ถึงออฟฟิศ — Monday Air</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body class="flex min-h-dvh flex-col bg-neutral-50 font-body text-base text-neutral-900">
+    <a href="#top" class="sr-only focus:not-sr-only focus:block focus:bg-primary-500 focus:px-4 focus:py-3 focus:font-semibold">ข้ามไปเนื้อหาหลัก</a>
+<header class="bg-neutral-900 text-neutral-0">
+  <nav class="mx-auto max-w-page page-x flex flex-wrap items-center justify-between gap-4 py-4" aria-label="เมนูหลัก">
+    <a href="index.html" class="flex items-center gap-3 font-display text-lg font-bold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">
+      <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-neutral-900" aria-hidden="true">✈</span>
+      MONDAY AIR
+    </a>
+    <ul class="flex flex-wrap items-center gap-6 text-sm">
+      <li><a href="index.html#departures" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ขาออกวันนี้</a></li>
+      <li><a href="index.html#cabins" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ชั้นโดยสาร</a></li>
+      <li><a href="index.html#checkin" class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 font-semibold text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เช็กอิน <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a></li>
+    </ul>
+  </nav>
+</header>
+    <main id="top" class="flex flex-1 flex-col">
+<div id="view-arrived">
+  <section class="mx-auto max-w-page page-x grid gap-6 py-10 lg:grid-cols-2">
+    <div class="flex min-w-0 flex-col gap-4 rounded-card bg-primary-500 p-6 md:p-10 lg:col-span-2">
+      <p class="font-display text-sm font-semibold tracking-widest">ARRIVED · MA-0101</p>
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <p class="font-display text-display font-extrabold tracking-tight motion-safe:animate-slide-l">OFC</p>
+        <p class="font-display text-3xl font-bold tabular-nums">09:00</p>
+      </div>
+      <h1 tabindex="-1" class="text-balance font-display text-2xl font-bold focus:outline-none md:text-3xl">ยินดีต้อนรับสู่ออฟฟิศ</h1>
+      <p>ลงจอดช้ากว่ากำหนด 5 นาที แต่ไม่มีใครสังเกต อุณหภูมิภายนอก 24°C จากแอร์</p>
+    </div>
+
+    <div class="flex min-w-0 flex-col gap-5 rounded-card bg-neutral-900 p-6 text-neutral-0 md:p-8">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <h2 class="text-balance font-display text-2xl font-bold">Baggage claim</h2>
+        <span class="rounded-full bg-primary-500 px-3 py-1 font-display text-sm font-semibold text-neutral-900">สายพาน 3</span>
+      </div>
+      <p class="text-sm text-neutral-200">สัมภาระที่คุณเช็กอินไว้ตอนเช้า</p>
+      <div class="flex flex-col gap-4 rounded-control border-2 border-neutral-500 p-4">
+        <ul id="bags" class="flex min-h-12 flex-wrap gap-3">
+          <li class="rounded-control bg-neutral-0 px-4 py-3 font-semibold text-neutral-900 motion-safe:animate-slide-r animate-stagger">โน้ตบุ๊ก</li>
+        </ul>
+        <p id="bags-empty" class="text-neutral-200" hidden>ไม่มีสัมภาระ เดินตัวเปล่ามาทำงาน</p>
+        <span class="runway block h-1 motion-safe:animate-runway" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <form id="rate-form" class="flex min-w-0 flex-col gap-5 rounded-card bg-neutral-0 p-6 md:p-8" novalidate>
+      <h2 class="text-balance font-display text-2xl font-bold">ให้คะแนนเที่ยวบินนี้</h2>
+      <fieldset id="rating-fieldset" class="flex min-w-0 flex-col gap-2" aria-describedby="err-rating">
+        <legend class="mb-2 text-sm font-semibold">เช้านี้เป็นยังไงบ้าง *</legend>
+        <div id="rating-group" class="grid grid-cols-5 gap-2 motion-safe:data-shake:animate-shake">
+          <label class="flex cursor-pointer flex-col items-center gap-1 rounded-control border-2 border-neutral-200 px-1 py-3 text-center hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-neutral-900 has-disabled:pointer-events-none has-disabled:not-has-checked:opacity-40">
+            <input type="radio" name="rating" required aria-describedby="err-rating" value="1" class="sr-only"><span class="font-display text-2xl font-bold">1</span><span class="text-sm">ง่วงมาก</span>
+          </label>
+          <label class="flex cursor-pointer flex-col items-center gap-1 rounded-control border-2 border-neutral-200 px-1 py-3 text-center hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-neutral-900 has-disabled:pointer-events-none has-disabled:not-has-checked:opacity-40">
+            <input type="radio" name="rating" required aria-describedby="err-rating" value="2" class="sr-only"><span class="font-display text-2xl font-bold">2</span><span class="text-sm">พอไหว</span>
+          </label>
+          <label class="flex cursor-pointer flex-col items-center gap-1 rounded-control border-2 border-neutral-200 px-1 py-3 text-center hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-neutral-900 has-disabled:pointer-events-none has-disabled:not-has-checked:opacity-40">
+            <input type="radio" name="rating" required aria-describedby="err-rating" value="3" class="sr-only"><span class="font-display text-2xl font-bold">3</span><span class="text-sm">ปกติ</span>
+          </label>
+          <label class="flex cursor-pointer flex-col items-center gap-1 rounded-control border-2 border-neutral-200 px-1 py-3 text-center hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-neutral-900 has-disabled:pointer-events-none has-disabled:not-has-checked:opacity-40">
+            <input type="radio" name="rating" required aria-describedby="err-rating" value="4" class="sr-only"><span class="font-display text-2xl font-bold">4</span><span class="text-sm">สดใส</span>
+          </label>
+          <label class="flex cursor-pointer flex-col items-center gap-1 rounded-control border-2 border-neutral-200 px-1 py-3 text-center hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-neutral-900 has-disabled:pointer-events-none has-disabled:not-has-checked:opacity-40">
+            <input type="radio" name="rating" required aria-describedby="err-rating" value="5" class="sr-only"><span class="font-display text-2xl font-bold">5</span><span class="text-sm">พร้อมลุย</span>
+          </label>
+        </div>
+        <p id="err-rating" aria-live="polite" class="text-sm text-danger-600" hidden>เลือกคะแนนก่อนส่ง</p>
+      </fieldset>
+      <div class="flex flex-col gap-2">
+        <label for="rate-note" class="text-sm font-semibold">ฝากถึงกัปตัน</label>
+        <textarea id="rate-note" name="rating-note" rows="2" placeholder="ขอแอร์เบาลงหน่อย"
+          class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900 disabled:cursor-not-allowed disabled:border-neutral-200 disabled:bg-neutral-50 disabled:text-neutral-500"></textarea>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <button id="rate-submit" type="submit" class="rounded-full bg-neutral-900 px-6 py-3 font-semibold text-neutral-0 transition hover:bg-neutral-500 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 disabled:pointer-events-none disabled:bg-neutral-200 disabled:text-neutral-500">ส่งคะแนน</button>
+        <p id="rate-thanks" class="flex items-center gap-2 font-semibold" role="status" hidden>
+          <span class="grid size-8 place-items-center rounded-full bg-primary-500 text-sm motion-safe:animate-pop" aria-hidden="true">✓</span> ขอบคุณ กัปตันอ่านแล้ว
+        </p>
+      </div>
+    </form>
+
+    <div class="flex min-w-0 flex-col gap-6 rounded-card border-2 border-neutral-900 bg-neutral-0 p-6 md:flex-row md:items-center md:justify-between md:p-8 lg:col-span-2">
+      <div class="flex flex-col gap-1">
+        <p class="font-display text-sm font-semibold tracking-widest text-neutral-500">NEXT FLIGHT · MA-1700</p>
+        <p class="font-display text-3xl font-extrabold">OFC → BED</p>
+        <p class="text-neutral-500">ออก 17:00 · ประตู B1 · ถึงเตียง 17:30</p>
+      </div>
+      <a id="return-checkin" href="return.html" class="group/btn inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-3 font-semibold text-neutral-900 transition hover:bg-primary-600 active:scale-95 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900">เช็กอินเที่ยวกลับ <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a>
+    </div>
+  </section>
+</div>
+    </main>
+<footer class="bg-neutral-900 text-neutral-200">
+  <div class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between">
+    <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>  </div>
+</footer>
+    <script>
+      const passenger = new URLSearchParams(window.location.search);
+      const returnLink = document.getElementById("return-checkin");
+      returnLink.href = "return.html" + window.location.search;
+      const bags = passenger.has("name") ? passenger.getAll("bag") : ["โน้ตบุ๊ก"];
+      const bagList = document.getElementById("bags");
+      const bagTemplate = bagList.firstElementChild;
+      bagList.replaceChildren();
+      bags.forEach((name, index) => {
+        const bag = bagTemplate.cloneNode(true);
+        bag.textContent = name;
+        bag.style.setProperty("--i", index);
+        bagList.append(bag);
+      });
+      document.getElementById("bags-empty").hidden = bags.length > 0;
+
+      const rateForm = document.getElementById("rate-form");
+      const ratingError = document.getElementById("err-rating");
+      const ratingInputs = rateForm.querySelectorAll('input[name="rating"]');
+      rateForm.addEventListener("change", () => {
+        ratingError.hidden = true;
+        ratingInputs.forEach(input => input.removeAttribute("aria-invalid"));
+      });
+      rateForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const picked = rateForm.querySelector('input[name="rating"]:checked');
+        if (!picked) {
+          ratingError.hidden = false;
+          ratingInputs.forEach(input => input.setAttribute("aria-invalid", "true"));
+          const group = document.getElementById("rating-group");
+          group.removeAttribute("data-shake");
+          void group.offsetWidth;
+          group.setAttribute("data-shake", "");
+          ratingInputs[0].focus();
+          return;
+        }
+        passenger.set("rating", picked.value);
+        passenger.set("rating-note", document.getElementById("rate-note").value);
+        returnLink.href = "return.html?" + passenger.toString();
+        lockRating();
+      });
+      function lockRating() {
+        document.getElementById("rating-fieldset").disabled = true;
+        document.getElementById("rate-note").disabled = true;
+        document.getElementById("rate-submit").disabled = true;
+        document.getElementById("rate-submit").textContent = "ส่งแล้ว";
+        document.getElementById("rate-thanks").hidden = false;
+      }
+      const savedRating = passenger.get("rating");
+      if (["1", "2", "3", "4", "5"].includes(savedRating)) {
+        rateForm.querySelector('input[name="rating"][value="' + savedRating + '"]').checked = true;
+        document.getElementById("rate-note").value = passenger.get("rating-note") || "";
+        lockRating();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Monday Air เที่ยวบินวันจันทร์จากเตียงไปออฟฟิศ เช็กอินและรับบัตรขึ้นเครื่อง">
+    <meta name="theme-color" content="rgb(17 17 17)">
+    <link rel="icon" href="data:,">
+    <title>ถึงเตียงแล้ว — Monday Air</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body class="flex min-h-dvh flex-col bg-neutral-50 font-body text-base text-neutral-900">
+    <a href="#top" class="sr-only focus:not-sr-only focus:block focus:bg-primary-500 focus:px-4 focus:py-3 focus:font-semibold">ข้ามไปเนื้อหาหลัก</a>
+<header class="bg-neutral-900 text-neutral-0">
+  <nav class="mx-auto max-w-page page-x flex flex-wrap items-center justify-between gap-4 py-4" aria-label="เมนูหลัก">
+    <a href="index.html" class="flex items-center gap-3 font-display text-lg font-bold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">
+      <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-neutral-900" aria-hidden="true">✈</span>
+      MONDAY AIR
+    </a>
+    <ul class="flex flex-wrap items-center gap-6 text-sm">
+      <li><a href="index.html#departures" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ขาออกวันนี้</a></li>
+      <li><a href="index.html#cabins" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ชั้นโดยสาร</a></li>
+      <li><a href="index.html#checkin" class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 font-semibold text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เช็กอิน <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a></li>
+    </ul>
+  </nav>
+</header>
+    <main id="top" class="flex flex-1 flex-col">
+<div id="view-done" class="flex flex-1 flex-col">
+  <section class="flex-1 bg-neutral-900 py-12 text-neutral-0 md:py-20">
+    <div class="mx-auto max-w-page page-x flex flex-col gap-10">
+      <div class="flex flex-col gap-4">
+        <p class="font-display text-sm font-semibold tracking-widest text-primary-500">ARRIVED · MA-1700</p>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <p class="font-display text-display font-extrabold tracking-tight text-primary-500 motion-safe:animate-rise">BED</p>
+          <p class="font-display text-3xl font-bold tabular-nums">17:30</p>
+        </div>
+        <h1 tabindex="-1" class="text-balance font-display text-2xl font-bold focus:outline-none md:text-3xl">ถึงเตียงแล้ว ภารกิจวันจันทร์สำเร็จ</h1>
+        <p class="text-neutral-200">อาบน้ำ กินข้าว แล้วพักผ่อนให้เต็มที่</p>
+      </div>
+
+      <dl class="grid grid-cols-2 gap-4 font-display md:grid-cols-4">
+        <div class="flex flex-col gap-2 rounded-control bg-primary-500 p-5 text-neutral-900 motion-safe:animate-rise">
+          <dt class="font-body text-sm font-semibold">เที่ยวบินวันนี้</dt>
+          <dd class="text-3xl font-extrabold tabular-nums"><span id="stat-flights">2</span> <span class="text-lg">เที่ยว</span></dd>
+        </div>
+        <div class="flex flex-col gap-2 rounded-control bg-neutral-0 p-5 text-neutral-900 motion-safe:animate-rise">
+          <dt class="font-body text-sm font-semibold">กาแฟที่ได้</dt>
+          <dd class="text-3xl font-extrabold tabular-nums"><span id="stat-cups">4</span> <span class="text-lg">แก้ว</span></dd>
+        </div>
+        <div class="flex flex-col gap-2 rounded-control bg-neutral-0 p-5 text-neutral-900 motion-safe:animate-rise">
+          <dt class="font-body text-sm font-semibold">คะแนนเช้านี้</dt>
+          <dd class="text-3xl font-extrabold tabular-nums"><span id="stat-rating">–</span> <span class="text-lg">/ 5</span></dd>
+        </div>
+        <div class="flex flex-col gap-2 rounded-control bg-neutral-0 p-5 text-neutral-900 motion-safe:animate-rise">
+          <dt class="font-body text-sm font-semibold">สัมภาระกลับบ้าน</dt>
+          <dd class="text-3xl font-extrabold tabular-nums"><span id="stat-bags">1</span> <span class="text-lg">ชิ้น</span></dd>
+        </div>
+      </dl>
+
+      <div class="flex flex-col gap-4 rounded-card border-2 border-neutral-500 p-6 md:flex-row md:items-center md:justify-between md:p-8">
+        <div>
+          <p class="font-display text-xl font-bold">เที่ยวบินถัดไป: วันจันทร์หน้า 08:59</p>
+          <p class="text-sm text-neutral-200">MA-0101 · BED → OFC · เจอกันใหม่ในอีก 7 วัน</p>
+        </div>
+        <a id="restart" href="index.html" class="group/btn inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 px-6 py-3 font-semibold text-neutral-900 transition hover:bg-primary-600 active:scale-95 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-0">เจอกันวันจันทร์หน้า <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+    </main>
+<footer class="bg-neutral-900 text-neutral-200">
+  <div class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between">
+    <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>  </div>
+</footer>
+    <script>
+      const passenger = new URLSearchParams(window.location.search);
+      const cups = { Economy: 1, Business: 2, First: 3 };
+      if (passenger.has("name")) {
+        const outboundCups = Object.hasOwn(cups, passenger.get("out-cabin")) ? cups[passenger.get("out-cabin")] : 2;
+        const returnCups = Object.hasOwn(cups, passenger.get("cabin")) ? cups[passenger.get("cabin")] : 2;
+        document.getElementById("stat-cups").textContent = outboundCups + returnCups;
+        document.getElementById("stat-bags").textContent = passenger.getAll("bag").length;
+        const rating = passenger.get("out-rating");
+        document.getElementById("stat-rating").textContent = ["1", "2", "3", "4", "5"].includes(rating) ? rating : "–";
+      }
+    </script>
+  </body>
+</html>

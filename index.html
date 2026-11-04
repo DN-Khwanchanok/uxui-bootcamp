@@ -161,6 +161,17 @@
   <div id="home-slot">
   <section id="checkin" class="mx-auto max-w-page page-x pb-10" aria-labelledby="checkin-title">
     <div class="relative grid gap-8 overflow-hidden rounded-card bg-neutral-0 p-6 md:p-10 lg:grid-cols-3">
+      <div id="boarding-overlay" class="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 bg-neutral-900 p-6 text-neutral-0" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden>
+        <div class="relative h-40 w-full max-w-2xl overflow-hidden" aria-hidden="true">
+          <span class="runway absolute inset-x-0 bottom-8 h-1 motion-safe:animate-runway"></span>
+          <span class="absolute bottom-8 left-0 text-3xl text-primary-500 motion-safe:animate-takeoff">✈</span>
+        </div>
+        <p id="boarding-text" class="font-display text-2xl font-bold">กำลังขึ้นเครื่อง…</p>
+        <p id="boarded-text" class="flex items-center gap-3 font-display text-3xl font-bold text-primary-500 motion-safe:animate-pop" hidden>
+          <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-xl text-neutral-900" aria-hidden="true">✓</span>
+          ขึ้นเครื่องแล้ว
+        </p>
+      </div>
       <div class="flex min-w-0 flex-col gap-4">
         <p class="font-display text-sm font-semibold tracking-widest text-neutral-500">CHECK-IN · <span>MA-0101</span></p>
         <h2 id="checkin-title" class="text-balance font-display text-3xl font-bold">เช็กอิน</h2>
@@ -245,5 +256,68 @@
   <div class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between">
     <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>  </div>
 </footer>
+    <script>
+      const checkinForm = document.getElementById("checkin-form");
+      const previousCheckin = new URLSearchParams(window.location.search);
+      if (previousCheckin.has("name")) {
+        for (const field of checkinForm.elements) {
+          if (!field.name) continue;
+          if (field.type === "checkbox" || field.type === "radio") {
+            field.checked = previousCheckin.getAll(field.name).includes(field.value);
+          } else if (previousCheckin.has(field.name)) {
+            field.value = previousCheckin.get(field.name);
+          }
+        }
+      }
+      checkinForm.addEventListener("invalid", (event) => {
+        event.preventDefault();
+        if (event.target.id === "consent") {
+          event.target.setAttribute("aria-invalid", "true");
+        }
+        checkinForm.querySelector("input:invalid, select:invalid, textarea:invalid").focus();
+      }, true);
+      checkinForm.addEventListener("input", (event) => {
+        if (event.target.validity.valid) {
+          event.target.removeAttribute("aria-invalid");
+        }
+      });
+
+      const boardingOverlay = document.getElementById("boarding-overlay");
+      const boardingText = document.getElementById("boarding-text");
+      const boardedText = document.getElementById("boarded-text");
+      const checkinButton = checkinForm.querySelector('button[type="submit"]');
+      let boardedTimer;
+      let boardingPassTimer;
+
+      checkinForm.addEventListener("submit", (event) => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        event.preventDefault();
+        if (checkinButton.disabled) return;
+
+        checkinButton.disabled = true;
+        checkinForm.inert = true;
+        boardingOverlay.hidden = false;
+        boardingOverlay.focus({ preventScroll: true });
+        boardingOverlay.scrollIntoView({ block: "center" });
+
+        boardedTimer = setTimeout(() => {
+          boardingText.hidden = true;
+          boardedText.hidden = false;
+        }, 1400);
+        boardingPassTimer = setTimeout(() => {
+          checkinForm.submit();
+        }, 2400);
+      });
+
+      window.addEventListener("pageshow", () => {
+        clearTimeout(boardedTimer);
+        clearTimeout(boardingPassTimer);
+        boardingOverlay.hidden = true;
+        boardingText.hidden = false;
+        boardedText.hidden = true;
+        checkinButton.disabled = false;
+        checkinForm.inert = false;
+      });
+    </script>
   </body>
 </html>
