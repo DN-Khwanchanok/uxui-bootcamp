@@ -1,136 +1,359 @@
 <!doctype html>
 <html lang="th">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="Monday Air เที่ยวบินวันจันทร์จากเตียงไปออฟฟิศ เช็กอินและรับบัตรขึ้นเครื่อง">
-    <meta name="theme-color" content="rgb(17 17 17)">
-    <link rel="icon" href="data:,">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Monday Air เที่ยวบินวันจันทร์จากเตียงไปออฟฟิศ เช็กอินและรับบัตรขึ้นเครื่อง"
+    />
+    <meta name="theme-color" content="rgb(17 17 17)" />
+    <link rel="icon" href="data:," />
     <title>เช็กอินเที่ยวกลับ — Monday Air</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap">
-    <link rel="stylesheet" href="styles/site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="styles/site.css" />
   </head>
   <body class="flex min-h-dvh flex-col bg-neutral-50 font-body text-base text-neutral-900">
-    <a href="#top" class="sr-only focus:not-sr-only focus:block focus:bg-primary-500 focus:px-4 focus:py-3 focus:font-semibold">ข้ามไปเนื้อหาหลัก</a>
-<header class="bg-neutral-900 text-neutral-0">
-  <nav class="mx-auto max-w-page page-x flex flex-wrap items-center justify-between gap-4 py-4" aria-label="เมนูหลัก">
-    <a href="index.html" class="flex items-center gap-3 font-display text-lg font-bold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">
-      <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-neutral-900" aria-hidden="true">✈</span>
-      MONDAY AIR
-    </a>
-    <ul class="flex flex-wrap items-center gap-6 text-sm">
-      <li><a href="index.html#departures" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ขาออกวันนี้</a></li>
-      <li><a href="index.html#cabins" class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500">ชั้นโดยสาร</a></li>
-      <li><a href="index.html#checkin" class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 font-semibold text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500">เช็กอิน <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></a></li>
-    </ul>
-  </nav>
-</header>
+    <a
+      href="#top"
+      class="sr-only focus:not-sr-only focus:block focus:bg-primary-500 focus:px-4 focus:py-3 focus:font-semibold"
+      >ข้ามไปเนื้อหาหลัก</a
+    >
+    <header class="bg-neutral-900 text-neutral-0">
+      <nav
+        class="mx-auto max-w-page page-x flex flex-wrap items-center justify-between gap-4 py-4"
+        aria-label="เมนูหลัก"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3 font-display text-lg font-bold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500"
+        >
+          <span
+            class="grid size-10 place-items-center rounded-full bg-primary-500 text-neutral-900"
+            aria-hidden="true"
+            >✈</span
+          >
+          MONDAY AIR
+        </a>
+        <ul class="flex flex-wrap items-center gap-6 text-sm">
+          <li>
+            <a
+              href="index.html#departures"
+              class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500"
+              >ขาออกวันนี้</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#cabins"
+              class="hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500"
+              >ชั้นโดยสาร</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#checkin"
+              class="group/btn inline-flex items-center gap-2 rounded-full bg-primary-500 px-5 py-2 font-semibold text-neutral-900 hover:bg-primary-600 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+              >เช็กอิน
+              <span
+                aria-hidden="true"
+                class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1"
+                >→</span
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main id="top" class="flex flex-1 flex-col">
-<div id="view-return">
-  <section class="mx-auto max-w-page page-x pt-10 pb-6">
-    <div class="flex flex-col gap-4 rounded-card bg-neutral-900 p-6 text-neutral-0 md:p-10">
-      <a id="return-to-office" href="arrived.html" class="inline-flex w-fit items-center gap-2 text-sm text-neutral-200 hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500"><span aria-hidden="true">←</span> กลับไปที่ออฟฟิศ</a>
-      <p class="font-display text-sm font-semibold tracking-widest text-primary-500">RETURN FLIGHT · MA-1700</p>
-      <div class="flex flex-wrap items-end justify-between gap-4 font-display font-extrabold tracking-tight">
-        <p class="text-display motion-safe:animate-slide-l">OFC</p>
-        <span class="pb-4 text-3xl text-primary-500" aria-hidden="true">✈</span>
-        <p class="text-display text-primary-500 motion-safe:animate-slide-r">BED</p>
-      </div>
-      <h1 tabindex="-1" class="text-balance font-display text-2xl font-bold focus:outline-none md:text-3xl">ได้เวลากลับบ้าน</h1>
-      <p class="text-neutral-200">ออกจากออฟฟิศ 17:00 ถึงเตียง 17:30 ถ้าไม่มีประชุมด่วน · ข้อมูลผู้โดยสารกรอกไว้ให้แล้ว</p>
-    </div>
-  </section>
-  <section id="checkin" class="mx-auto max-w-page page-x pb-10" aria-labelledby="checkin-title">
-    <div class="relative grid gap-8 overflow-hidden rounded-card bg-neutral-0 p-6 md:p-10 lg:grid-cols-3">
-      <div id="boarding-overlay" class="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 bg-neutral-900 p-6 text-neutral-0" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" hidden>
-        <div class="relative h-40 w-full max-w-2xl overflow-hidden" aria-hidden="true">
-          <span class="runway absolute inset-x-0 bottom-8 h-1 motion-safe:animate-runway"></span>
-          <span class="absolute bottom-8 left-0 text-3xl text-primary-500 motion-safe:animate-takeoff">✈</span>
-        </div>
-        <p id="boarding-text" class="font-display text-2xl font-bold">กำลังขึ้นเครื่อง…</p>
-        <p id="boarded-text" class="flex items-center gap-3 font-display text-3xl font-bold text-primary-500 motion-safe:animate-pop" hidden>
-          <span class="grid size-10 place-items-center rounded-full bg-primary-500 text-xl text-neutral-900" aria-hidden="true">✓</span>
-          ขึ้นเครื่องแล้ว
-        </p>
-      </div>
-      <div class="flex min-w-0 flex-col gap-4">
-        <p class="font-display text-sm font-semibold tracking-widest text-neutral-500">CHECK-IN · <span>MA-1700</span></p>
-        <h2 id="checkin-title" class="text-balance font-display text-3xl font-bold">เช็กอิน</h2>
-        <p class="flex items-center gap-3 font-display text-xl font-bold"><span>OFC</span> <span aria-hidden="true">→</span> <span>BED</span> <span class="font-body text-sm font-medium text-neutral-500"><span>17:00</span> · ประตู <span>B1</span></span></p>
-        <p class="text-neutral-500">กรอกข้อมูลผู้โดยสารเพื่อรับบัตรขึ้นเครื่อง ช่องที่มี * ต้องกรอก</p>
-      </div>
-
-      <form id="checkin-form" class="grid min-w-0 gap-6 md:grid-cols-2 lg:col-span-2 *:min-w-0" action="boarding-pass.html" method="get">
-        <input type="hidden" name="leg" value="back">
-        <div class="flex flex-col gap-2">
-          <label for="name" class="text-sm font-semibold">ชื่อผู้โดยสาร *</label>
-          <input id="name" name="name" type="text" required pattern=".*\S.*" autocomplete="name" placeholder="สมชาย ใจดี" aria-describedby="err-name"
-            class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900">
-          <p id="err-name" class="field-error text-sm text-danger-600">ลืมใส่ชื่อผู้โดยสาร</p>
-        </div>
-
-        <div class="flex flex-col gap-2">
-          <label for="email" class="text-sm font-semibold">อีเมล *</label>
-          <input id="email" name="email" type="email" required autocomplete="email" placeholder="somchai@example.com" aria-describedby="err-email"
-            class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900">
-          <p id="err-email" class="field-error text-sm text-danger-600">รูปแบบอีเมลยังไม่ถูก ลองเช็กว่ามี @ และโดเมน</p>
-        </div>
-
-        <fieldset class="flex min-w-0 flex-col gap-3 md:col-span-2" aria-describedby="err-cabin">
-          <legend class="mb-2 text-sm font-semibold">ชั้นโดยสาร *</legend>
-          <div class="grid gap-3 sm:grid-cols-3">
-            <label class="flex cursor-pointer items-center gap-3 rounded-control border-2 border-neutral-200 px-4 py-3 hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500">
-              <input type="radio" id="cabin-economy" aria-labelledby="label-cabin-economy" name="cabin" value="Economy" required aria-describedby="err-cabin" class="size-4 accent-neutral-900"> <span id="label-cabin-economy"><b class="font-display">Y</b> · Economy</span>
-            </label>
-            <label class="flex cursor-pointer items-center gap-3 rounded-control border-2 border-neutral-200 px-4 py-3 hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500">
-              <input type="radio" id="cabin-business" aria-labelledby="label-cabin-business" name="cabin" value="Business" required aria-describedby="err-cabin" class="size-4 accent-neutral-900"> <span id="label-cabin-business"><b class="font-display">J</b> · Business</span>
-            </label>
-            <label class="flex cursor-pointer items-center gap-3 rounded-control border-2 border-neutral-200 px-4 py-3 hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500">
-              <input type="radio" id="cabin-first" aria-labelledby="label-cabin-first" name="cabin" value="First" required aria-describedby="err-cabin" class="size-4 accent-neutral-900"> <span id="label-cabin-first"><b class="font-display">F</b> · First</span>
-            </label>
+      <div id="view-return">
+        <section class="mx-auto max-w-page page-x pt-10 pb-6">
+          <div class="flex flex-col gap-4 rounded-card bg-neutral-900 p-6 text-neutral-0 md:p-10">
+            <a
+              id="return-to-office"
+              href="arrived.html"
+              class="inline-flex w-fit items-center gap-2 text-sm text-neutral-200 hover:text-primary-500 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-500"
+              ><span aria-hidden="true">←</span> กลับไปที่ออฟฟิศ</a
+            >
+            <p class="font-display text-sm font-semibold tracking-widest text-primary-500">
+              RETURN FLIGHT · MA-1700
+            </p>
+            <div
+              class="flex flex-wrap items-end justify-between gap-4 font-display font-extrabold tracking-tight"
+            >
+              <p class="text-display motion-safe:animate-slide-l">OFC</p>
+              <span class="pb-4 text-3xl text-primary-500" aria-hidden="true">✈</span>
+              <p class="text-display text-primary-500 motion-safe:animate-slide-r">BED</p>
+            </div>
+            <h1
+              tabindex="-1"
+              class="text-balance font-display text-2xl font-bold focus:outline-none md:text-3xl"
+            >
+              ได้เวลากลับบ้าน
+            </h1>
+            <p class="text-neutral-200">
+              ออกจากออฟฟิศ 17:00 ถึงเตียง 17:30 ถ้าไม่มีประชุมด่วน · ข้อมูลผู้โดยสารกรอกไว้ให้แล้ว
+            </p>
           </div>
-          <p id="err-cabin" class="field-error text-sm text-danger-600">เลือกที่นั่งก่อนขึ้นเครื่อง</p>
-        </fieldset>
+        </section>
+        <section
+          id="checkin"
+          class="mx-auto max-w-page page-x pb-10"
+          aria-labelledby="checkin-title"
+        >
+          <div
+            class="relative grid gap-8 overflow-hidden rounded-card bg-neutral-0 p-6 md:p-10 lg:grid-cols-3"
+          >
+            <div
+              id="boarding-overlay"
+              class="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 bg-neutral-900 p-6 text-neutral-0"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+              tabindex="-1"
+              hidden
+            >
+              <div class="relative h-40 w-full max-w-2xl overflow-hidden" aria-hidden="true">
+                <span
+                  class="runway absolute inset-x-0 bottom-8 h-1 motion-safe:animate-runway"
+                ></span>
+                <span
+                  class="absolute bottom-8 left-0 text-3xl text-primary-500 motion-safe:animate-takeoff"
+                  >✈</span
+                >
+              </div>
+              <p id="boarding-text" class="font-display text-2xl font-bold">กำลังขึ้นเครื่อง…</p>
+              <p
+                id="boarded-text"
+                class="flex items-center gap-3 font-display text-3xl font-bold text-primary-500 motion-safe:animate-pop"
+                hidden
+              >
+                <span
+                  class="grid size-10 place-items-center rounded-full bg-primary-500 text-xl text-neutral-900"
+                  aria-hidden="true"
+                  >✓</span
+                >
+                ขึ้นเครื่องแล้ว
+              </p>
+            </div>
+            <div class="flex min-w-0 flex-col gap-4">
+              <p class="font-display text-sm font-semibold tracking-widest text-neutral-500">
+                CHECK-IN · <span>MA-1700</span>
+              </p>
+              <h2 id="checkin-title" class="text-balance font-display text-3xl font-bold">
+                เช็กอิน
+              </h2>
+              <p class="flex items-center gap-3 font-display text-xl font-bold">
+                <span>OFC</span> <span aria-hidden="true">→</span> <span>BED</span>
+                <span class="font-body text-sm font-medium text-neutral-500"
+                  ><span>17:00</span> · ประตู <span>B1</span></span
+                >
+              </p>
+              <p class="text-neutral-500">
+                กรอกข้อมูลผู้โดยสารเพื่อรับบัตรขึ้นเครื่อง ช่องที่มี * ต้องกรอก
+              </p>
+            </div>
 
-        <fieldset class="flex min-w-0 flex-col gap-2">
-          <legend class="mb-2 text-sm font-semibold">สัมภาระ</legend>
-          <div class="grid grid-cols-2 gap-2">
-            <label class="flex items-center gap-2"><input type="checkbox" name="bag" value="โน้ตบุ๊ก" class="size-4 accent-neutral-900" checked> โน้ตบุ๊ก</label>
-            <label class="flex items-center gap-2"><input type="checkbox" name="bag" value="ที่ชาร์จ" class="size-4 accent-neutral-900"> ที่ชาร์จ</label>
-            <label class="flex items-center gap-2"><input type="checkbox" name="bag" value="ข้าวกล่อง" class="size-4 accent-neutral-900"> ข้าวกล่อง</label>
-            <label class="flex items-center gap-2"><input type="checkbox" name="bag" value="ความหวัง" class="size-4 accent-neutral-900"> ความหวัง</label>
+            <form
+              id="checkin-form"
+              class="grid min-w-0 gap-6 md:grid-cols-2 lg:col-span-2 *:min-w-0"
+              action="boarding-pass.html"
+              method="get"
+            >
+              <input type="hidden" name="leg" value="back" />
+              <div class="flex flex-col gap-2">
+                <label for="name" class="text-sm font-semibold">ชื่อผู้โดยสาร *</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  pattern=".*\S.*"
+                  autocomplete="name"
+                  placeholder="สมชาย ใจดี"
+                  aria-describedby="err-name"
+                  class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900"
+                />
+                <p id="err-name" class="field-error text-sm text-danger-600">ลืมใส่ชื่อผู้โดยสาร</p>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <label for="email" class="text-sm font-semibold">อีเมล *</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="somchai@example.com"
+                  aria-describedby="err-email"
+                  class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900"
+                />
+                <p id="err-email" class="field-error text-sm text-danger-600">
+                  รูปแบบอีเมลยังไม่ถูก ลองเช็กว่ามี @ และโดเมน
+                </p>
+              </div>
+
+              <fieldset
+                class="flex min-w-0 flex-col gap-3 md:col-span-2"
+                aria-describedby="err-cabin"
+              >
+                <legend class="mb-2 text-sm font-semibold">ชั้นโดยสาร *</legend>
+                <div class="grid gap-3 sm:grid-cols-3">
+                  <label
+                    class="flex cursor-pointer items-center gap-3 rounded-control border-2 border-neutral-200 px-4 py-3 hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500"
+                  >
+                    <input
+                      type="radio"
+                      id="cabin-economy"
+                      aria-labelledby="label-cabin-economy"
+                      name="cabin"
+                      value="Economy"
+                      required
+                      aria-describedby="err-cabin"
+                      class="size-4 accent-neutral-900"
+                    />
+                    <span id="label-cabin-economy"><b class="font-display">Y</b> · Economy</span>
+                  </label>
+                  <label
+                    class="flex cursor-pointer items-center gap-3 rounded-control border-2 border-neutral-200 px-4 py-3 hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500"
+                  >
+                    <input
+                      type="radio"
+                      id="cabin-business"
+                      aria-labelledby="label-cabin-business"
+                      name="cabin"
+                      value="Business"
+                      required
+                      aria-describedby="err-cabin"
+                      class="size-4 accent-neutral-900"
+                    />
+                    <span id="label-cabin-business"><b class="font-display">J</b> · Business</span>
+                  </label>
+                  <label
+                    class="flex cursor-pointer items-center gap-3 rounded-control border-2 border-neutral-200 px-4 py-3 hover:border-neutral-900 has-checked:border-neutral-900 has-checked:bg-primary-500"
+                  >
+                    <input
+                      type="radio"
+                      id="cabin-first"
+                      aria-labelledby="label-cabin-first"
+                      name="cabin"
+                      value="First"
+                      required
+                      aria-describedby="err-cabin"
+                      class="size-4 accent-neutral-900"
+                    />
+                    <span id="label-cabin-first"><b class="font-display">F</b> · First</span>
+                  </label>
+                </div>
+                <p id="err-cabin" class="field-error text-sm text-danger-600">
+                  เลือกที่นั่งก่อนขึ้นเครื่อง
+                </p>
+              </fieldset>
+
+              <fieldset class="flex min-w-0 flex-col gap-2">
+                <legend class="mb-2 text-sm font-semibold">สัมภาระ</legend>
+                <div class="grid grid-cols-2 gap-2">
+                  <label class="flex items-center gap-2"
+                    ><input
+                      type="checkbox"
+                      name="bag"
+                      value="โน้ตบุ๊ก"
+                      class="size-4 accent-neutral-900"
+                      checked
+                    />
+                    โน้ตบุ๊ก</label
+                  >
+                  <label class="flex items-center gap-2"
+                    ><input
+                      type="checkbox"
+                      name="bag"
+                      value="ที่ชาร์จ"
+                      class="size-4 accent-neutral-900"
+                    />
+                    ที่ชาร์จ</label
+                  >
+                  <label class="flex items-center gap-2"
+                    ><input
+                      type="checkbox"
+                      name="bag"
+                      value="ข้าวกล่อง"
+                      class="size-4 accent-neutral-900"
+                    />
+                    ข้าวกล่อง</label
+                  >
+                  <label class="flex items-center gap-2"
+                    ><input
+                      type="checkbox"
+                      name="bag"
+                      value="ความหวัง"
+                      class="size-4 accent-neutral-900"
+                    />
+                    ความหวัง</label
+                  >
+                </div>
+              </fieldset>
+
+              <div class="flex flex-col gap-2 md:col-span-2">
+                <label for="note" class="text-sm font-semibold">คำขอพิเศษ</label>
+                <textarea
+                  id="note"
+                  name="note"
+                  rows="3"
+                  placeholder="ขอไม่มีประชุม 9 โมง"
+                  class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col gap-2 md:col-span-2">
+                <label for="consent" class="flex items-center gap-3">
+                  <input
+                    id="consent"
+                    name="consent"
+                    value="accepted"
+                    type="checkbox"
+                    required
+                    class="size-4 accent-neutral-900"
+                    aria-describedby="err-consent"
+                  />
+                  ยอมรับว่าวันนี้วันจันทร์ *
+                </label>
+                <p id="err-consent" class="field-error text-sm text-danger-600">
+                  ต้องยอมรับก่อนขึ้นเครื่อง
+                </p>
+              </div>
+
+              <div class="md:col-span-2">
+                <button
+                  type="submit"
+                  class="group/btn inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-4 text-lg font-semibold text-neutral-900 transition hover:bg-primary-600 active:scale-95 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 disabled:pointer-events-none disabled:bg-neutral-200 disabled:text-neutral-500 md:w-auto"
+                >
+                  เช็กอิน
+                  <span
+                    aria-hidden="true"
+                    class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1"
+                    >→</span
+                  >
+                </button>
+              </div>
+            </form>
           </div>
-        </fieldset>
-
-        <div class="flex flex-col gap-2 md:col-span-2">
-          <label for="note" class="text-sm font-semibold">คำขอพิเศษ</label>
-          <textarea id="note" name="note" rows="3" placeholder="ขอไม่มีประชุม 9 โมง"
-            class="rounded-control border-2 border-neutral-200 bg-neutral-0 px-4 py-3 placeholder:text-neutral-500 hover:border-neutral-500 focus:border-neutral-900 focus:outline-2 focus:outline-offset-2 focus:outline-neutral-900"></textarea>
-        </div>
-
-        <div class="flex flex-col gap-2 md:col-span-2">
-          <label for="consent" class="flex items-center gap-3">
-            <input id="consent" name="consent" value="accepted" type="checkbox" required class="size-4 accent-neutral-900" aria-describedby="err-consent"> ยอมรับว่าวันนี้วันจันทร์ *
-          </label>
-          <p id="err-consent" class="field-error text-sm text-danger-600">ต้องยอมรับก่อนขึ้นเครื่อง</p>
-        </div>
-
-        <div class="md:col-span-2">
-          <button type="submit" class="group/btn inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-500 px-8 py-4 text-lg font-semibold text-neutral-900 transition hover:bg-primary-600 active:scale-95 active:bg-primary-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 disabled:pointer-events-none disabled:bg-neutral-200 disabled:text-neutral-500 md:w-auto">เช็กอิน <span aria-hidden="true" class="inline-block transition-transform duration-300 group-hover/btn:translate-x-1">→</span></button>
-        </div>
-      </form>
-    </div>
-  </section>
-</div>
+        </section>
+      </div>
     </main>
-<footer class="bg-neutral-900 text-neutral-200">
-  <div class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between">
-    <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>  </div>
-</footer>
+    <footer class="bg-neutral-900 text-neutral-200">
+      <div
+        class="mx-auto max-w-page page-x flex flex-col gap-2 border-t border-neutral-500 py-8 text-sm md:flex-row md:justify-between"
+      >
+        <p>© Monday Air · บินทุกวันจันทร์ ไม่มีวันหยุด (ยกเว้นวันหยุด)</p>
+      </div>
+    </footer>
     <script>
-
       const checkinForm = document.getElementById("checkin-form");
       const previousCheckin = new URLSearchParams(window.location.search);
       if (previousCheckin.has("name")) {
@@ -142,13 +365,12 @@
             field.value = previousCheckin.get(field.name);
           }
         }
-        if (previousCheckin.get("email")) {
-          document.getElementById("email").classList.replace("bg-neutral-0", "bg-input-restored");
-        }
       }
       const returningToEdit = previousCheckin.get("leg") === "back";
       checkinForm.elements.namedItem("leg").value = "back";
-      const outboundBags = returningToEdit ? previousCheckin.getAll("out-bag") : previousCheckin.getAll("bag");
+      const outboundBags = returningToEdit
+        ? previousCheckin.getAll("out-bag")
+        : previousCheckin.getAll("bag");
       function addTripField(name, value) {
         const field = document.createElement("input");
         field.type = "hidden";
@@ -157,9 +379,12 @@
         checkinForm.append(field);
       }
       for (const name of ["cabin", "meal", "rating", "rating-note"]) {
-        addTripField("out-" + name, previousCheckin.get("out-" + name) ?? previousCheckin.get(name) ?? "");
+        addTripField(
+          "out-" + name,
+          previousCheckin.get("out-" + name) ?? previousCheckin.get(name) ?? "",
+        );
       }
-      outboundBags.forEach(bag => addTripField("out-bag", bag));
+      outboundBags.forEach((bag) => addTripField("out-bag", bag));
       if (!returningToEdit) document.getElementById("consent").checked = false;
 
       const officeTrip = new URLSearchParams(previousCheckin);
@@ -171,20 +396,21 @@
         }
         officeTrip.delete("bag");
         officeTrip.delete("out-bag");
-        outboundBags.forEach(bag => officeTrip.append("bag", bag));
+        outboundBags.forEach((bag) => officeTrip.append("bag", bag));
       }
       document.getElementById("return-to-office").href = "arrived.html?" + officeTrip.toString();
-      checkinForm.addEventListener("invalid", (event) => {
-        event.preventDefault();
-        if (event.target.id === "consent") {
-          event.target.setAttribute("aria-invalid", "true");
-        }
-        checkinForm.querySelector("input:invalid, select:invalid, textarea:invalid").focus();
-      }, true);
+      checkinForm.addEventListener(
+        "invalid",
+        (event) => {
+          event.preventDefault();
+          if (event.target.id === "consent") {
+            event.target.setAttribute("aria-invalid", "true");
+          }
+          checkinForm.querySelector("input:invalid, select:invalid, textarea:invalid").focus();
+        },
+        true,
+      );
       checkinForm.addEventListener("input", (event) => {
-        if (event.target.id === "email") {
-          event.target.classList.replace("bg-input-restored", "bg-neutral-0");
-        }
         if (event.target.validity.valid) {
           event.target.removeAttribute("aria-invalid");
         }
@@ -226,7 +452,6 @@
         checkinButton.disabled = false;
         checkinForm.inert = false;
       });
-    
     </script>
   </body>
 </html>
